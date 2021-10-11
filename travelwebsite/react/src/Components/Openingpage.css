@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+.bg{
+    padding-top: 5vh;
+    min-height: 100vh;
+    background-image: url("../Images/Adventure.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: 'Mukta', sans-serif;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 2rem;
+    margin-top: -4vh;
+}
+.get{
+    height: 7vh;
+    width:14vw;
+    margin: 0vh 1vw;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-weight:700;
+    cursor:pointer;
+}
+.get:hover{
+    background-color: white;
+    color: black;
+}
+.trailer{
+    height: 7vh;
+    width:14vw;
+    margin: 0vh 1vw;
+    background-color: white;
+    border: 1px solid white;
+    font-weight:700;
+    cursor:pointer;
+}
