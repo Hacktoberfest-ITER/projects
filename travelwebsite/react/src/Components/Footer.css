@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+.foot{
+    min-height: 50vh;
+    background-color: #2e2d2d;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 2vh 0vw;
+}
+.foot label input{
+    outline: none;
+    border: none;
+    height: 3.5vh;
+    width: 20vw;
+    margin: 2vh 0vw;
+    margin-right: 1vw;
+    border: 2px solid white;
+}
+.foot label button{
+    height: 4vh;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0vh 1vw;
+    font-family: 'Ubuntu', sans-serif;
+}
+.foot table{
+    margin-top: 5vh;
+    margin-left:22vw;
+}
+.foot table thead{
+    text-align: left;
+    padding: 0vh 5vw;
+}
+.foot table tbody{
+    text-align: left;
+}
+.foot table thead th{
+   padding-right:10vw ;
+   padding-bottom: 2vh;
+}
+.foot table tbody td{
+    padding-bottom: 0.4vh;
+ }
