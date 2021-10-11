@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+#canvas {
+  border: 2px solid black;
+  cursor: crosshair;
+}
+
+.toolbox {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+ul {
+  list-style-type: none !important;
+}
+
+li {
+  text-align: center !important;
+}
+
+input {
+  outline: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+
