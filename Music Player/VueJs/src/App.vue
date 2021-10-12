@@ -13,6 +13,7 @@
      </div>
    </div>
    <br><br>
+   <input id="seekbar" ref="progress_bar" type="range" min="0" max="100" value="0" :onchange="change_duration">
     <div class="controls intr">
       <button class="previous" @click="prev"><img src="./assets/icons8-skip-to-start-50.png" alt=""></button>  
       <button class="play" v-if="!isPlaying" @click="play"><img src="./assets/icons8-circled-play-50.png" alt=""></button>
@@ -26,12 +27,14 @@
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data(){
     return{
       current:{},
       index: 0,
+      slider_position:0.0,
       isPlaying: false,
       songs:[
       {
@@ -95,23 +98,32 @@ export default {
         src: require('./Music/02 Bolna - Arijit Singh 190Kbps.mp3')
       },
       {
-        title: 'Bolna',
+        title: 'Aahista',
         artist: 'Arijit Singh',
-        src: require('./Music/02 Bolna - Arijit Singh 190Kbps.mp3')
+        src: require('./Music/01 Aahista - Laila Majnu.mp3')
       },
       {
-        title: 'Bolna',
+        title: 'Rabbta',
         artist: 'Arijit Singh',
-        src: require('./Music/02 Bolna - Arijit Singh 190Kbps.mp3')
+        src: require('./Music/02 Raabta - Title Song (Arijit Singh) 190Kbps.mp3')
       },
       {
-        title: 'Bolna',
+        title: 'Rabba',
         artist: 'Arijit Singh',
-        src: require('./Music/02 Bolna - Arijit Singh 190Kbps.mp3')
+        src: require('./Music/02 - Rabba - DownloadMing.SE.mp3')
       },
-
+      {
+        title: 'Zaalima',
+        artist: 'Arijit Singh',
+        src: require('./Music/02 Zaalima - Raees (Arijit Singh) 190kbps.mp3')
+      },
+      {
+        title: 'Phir Kabhi',
+        artist: 'Arijit Singh',
+        src: require('./Music/04 Phir Kabhi - MS Dhoni (Arijit Singh) - 320Kbps.mp3')
+      }
     ],
-    player:new Audio()
+    player:new Audio(),
   }
 },
 methods: {
@@ -132,6 +144,7 @@ methods: {
         this.play(this.current);
       }.bind(this));
       this.isPlaying = true;
+      console.log(this.player);
     },
     pause () {
       this.player.pause();
@@ -145,22 +158,38 @@ methods: {
 
       this.current = this.songs[this.index];
       this.play(this.current);
+      this.change_duration(1);
     },
     prev () {
       this.index--;
       if (this.index < 0) {
         this.index = this.songs.length-1;
       }
-
       this.current = this.songs[this.index];
       this.play(this.current);
+      this.change_duration(1);
+    },
+    change_duration () {
+      this.slider_position = (this.player.duration) * (this.$refs.progress_bar.value/100);
+      this.player.currentTime = this.slider_position;
+    },
+    updateTime: function() {
+            // Shorten down the activeTrack.currentTime
+            var cTime = this.player.currentTime;
+            // Get the new value for the seekbar by multiplying the current time by
+            // 100 divided by the duration
+            var newTime = cTime * (100 / this.player.duration);
+            // Update the seekbar
+            this.$refs.progress_bar.value = newTime;
     }
   },
   created () {
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
-  }
+    this.player.addEventListener("timeupdate", this.updateTime)
+  },
  }
+
 
 </script>
 
@@ -198,7 +227,7 @@ methods: {
 .player{
   background-color: white;
   position: relative;
-  border-radius: 10%;
+  border-radius: 12%;
   padding: 20px;
   margin: 50px 350px;
 }
@@ -208,4 +237,8 @@ methods: {
 .name{
   margin-left: 40px;
 }
+#seekbar{
+  width: 435px;
+}
 </style>
+
