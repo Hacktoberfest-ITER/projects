@@ -18,7 +18,7 @@
     ></script>
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css" />
-    <title>DRAWABLY</title>
+    <title>Drawably | The Whiteboard Web App</title>
   </head>
   <body>
     <div
@@ -39,9 +39,9 @@
         </li>
         <li class="tool m-3">
           <label for="form-range" class="form-label text-light"
-            >Pen Width (1-100)</label
+            >Pen Width (1-25)</label
           >
-          <input type="range" class="form-range pen-width" min="1" max="100" />
+          <input type="range" class="form-range pen-width" min="1" max="25" />
         </li>
         <li class="tool m-3">
           <button type="button" class="btn btn-outline-warning undo">
@@ -58,18 +58,3 @@
   <script src="canvas.js"></script>
 </html>
 
-<!-- <li class="tool m-3">
-              <label for="exampleColorInput" class="form-label text-light"
-                >Canvas</label
-              >
-              <input
-                type="color"
-                class="form-control form-control-color canvas-color"
-                value="#54e346"
-                title="Choose your color"
-              />
-            </li>
-            let canvasBackgroundInput = document.querySelector(".canvas-color");
-            canvasBackgroundInput.oninput = handleCanvasBackground; function
-            handleCanvasBackground(e) { // canvas.style.backgroundColor = e.target.value;
-            ctx.fillStyle = e.target.value; ctx.strokeRect(); } -->
