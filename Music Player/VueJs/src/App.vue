@@ -3,15 +3,18 @@
    <div class="player ">
      <div class="upper quiet">
     <div class="pic">
-       <img src="./assets/logo.png" alt="">
+       <img :src=current.path alt="" id="song_img"/>
     </div>
     <br>
      <div class="name">
        <h1 style="text-align: center;">{{ current.title }}</h1>
        <br>
        <p style="text-align: center;">{{ current.artist }}</p>
+       <br><br><br>
+       <input ref="volume_bar" type="range" min="0" max="100" value="60" :onchange="change_volume">
+       <p style="text-align: center;">Volume</p>
      </div>
-   </div>
+    </div>
    <br><br>
    <input id="seekbar" ref="progress_bar" type="range" min="0" max="100" value="0" :onchange="change_duration">
     <div class="controls intr">
@@ -40,86 +43,103 @@ export default {
       {
         title: 'Gaaliyan',
         artist: 'Ankit Tiwari',
+        path: require('./sp-thumbs/galliyan.jpg'),
         src: require('./Music/01 - Galliyan - DownloadMing.SE.mp3')
       },
       {
         title: 'Gerua',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/gerua.jpg'),
         src: require('./Music/01 - Gerua - DownloadMing.SE.mp3')
       },
       {
         title: 'Ae Watan',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/aewatan.jpg'),
         src: require('./Music/01 - Raazi - Ae Watan [DJMaza.Fun].mp3')
       },
       {
         title: 'Hamari Adhuri Kahani',
         artist: 'Arijit Singh',
+        path:  require('./sp-thumbs/hak.jpg'),
         src: require('./Music/01 Hamari Adhuri Kahani (Title Song) Arijit Singh 190Kbps.mp3')
       },
       {
         title: 'Ik Vaari Aa',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/ikvaari.jpg'),
         src: require('./Music/01 Ik Vaari Aa - Raabta (Arijit Singh) 190Kbps.mp3')
       },
       {
         title: 'Sukoon Mila',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/Sukoon Mila (Mary Kom) Arijit Singh [PagalWorld.com].mp3.[t=1277313068,m=5].jpg'),
         src: require('./Music/01 Sukoon Mila - Mary Kom (Arijit Singh) 160Kbps.mp3')
       },
       {
         title: 'Suno Na Sangemarmar',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/sunona.jpg'),
         src: require('./Music/01 Suno Na Sangemarmar - Youngistaan (Arijit Singh).mp3')
       },
       {
-        title: 'Bolna',
-        artist: 'Arijit Singh',
-        src: require('./Music/02 Bolna - Arijit Singh 190Kbps.mp3')
+        title: 'Tum Saath Ho',
+        artist: 'Arijit Singh, Alka Yagnik',
+        path: require('./sp-thumbs/Tum Saath Ho - Tamasha (Arijit Singh) 190Kbps.mp3.[t=1277313068,m=5].jpg'),
+        src: require('./Music/Tum Saath Ho - Tamasha (Arijit Singh) 190Kbps.mp3')
       },
       {
         title: 'Bekhayali',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/bekhayali.jpg'),
         src: require('./Music/01 - Bekhayali - Downloadming.SE.mp3')
       },
       {
         title: 'Rappan Rappi Rap',
-        artist: 'Arijit Singh',
+        artist: 'Benny Dayal',
+        path: require('./sp-thumbs/rappanrappi.jpg'),
         src: require('./Music/01 - Rappan Rappi Rap - DownloadMing.SE.mp3')
       },
       {
         title: 'Ban ja Tu meri Rani',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/banja.jpg'),
         src: require('./Music/01 - Tumhari Sulu - Ban Ja Rani [DJMaza.Info].mp3')
       },
       {
         title: 'Bolna',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/02 Bolna - Arijit Singh 190Kbps.mp3.[t=1277313112,m=5].jpg'),
         src: require('./Music/02 Bolna - Arijit Singh 190Kbps.mp3')
       },
       {
         title: 'Aahista',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/aahista.jpg'),
         src: require('./Music/01 Aahista - Laila Majnu.mp3')
       },
       {
         title: 'Rabbta',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/raabta.jpg'),
         src: require('./Music/02 Raabta - Title Song (Arijit Singh) 190Kbps.mp3')
       },
       {
         title: 'Rabba',
-        artist: 'Arijit Singh',
+        artist: 'Mohit Chauhan',
+        path: require('./sp-thumbs/rabba.jpg'),
         src: require('./Music/02 - Rabba - DownloadMing.SE.mp3')
       },
       {
         title: 'Zaalima',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/Zaalima - Raees (Arijit Singh) 190kbps.mp3.[t=1277313068,m=5].jpg'),
         src: require('./Music/02 Zaalima - Raees (Arijit Singh) 190kbps.mp3')
       },
       {
         title: 'Phir Kabhi',
         artist: 'Arijit Singh',
+        path: require('./sp-thumbs/phirKabhi.jpg'),
         src: require('./Music/04 Phir Kabhi - MS Dhoni (Arijit Singh) - 320Kbps.mp3')
       }
     ],
@@ -172,6 +192,9 @@ methods: {
     change_duration () {
       this.slider_position = (this.player.duration) * (this.$refs.progress_bar.value/100);
       this.player.currentTime = this.slider_position;
+    },
+    change_volume () {
+      this.player.volume=this.$refs.volume_bar.value/100;
     },
     updateTime: function() {
             // Shorten down the activeTrack.currentTime
@@ -240,5 +263,8 @@ methods: {
 #seekbar{
   width: 435px;
 }
+#song_img{
+  width:  200px;
+  height: 200px;
+}
 </style>
-
