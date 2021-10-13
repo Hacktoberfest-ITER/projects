@@ -1,0 +1,22 @@
+{
+  "name": "simuchat",
+  "version": "1.0.0",
+  "description": "real time chat application with rooms",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Rahul Anand Sahu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": "14.16.1"
+  }
+}
