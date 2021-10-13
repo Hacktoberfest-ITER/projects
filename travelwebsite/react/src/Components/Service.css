@@ -1,0 +1,11 @@
+.design{
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: ani 4s  0s infinite ;
+}
+@keyframes ani
+{
+    from{width: 0}
+    to{width: 100%;} 
+}
