@@ -42,3 +42,26 @@
 .foot table tbody td{
     padding-bottom: 0.4vh;
  }
+ @media only screen and (max-width:600px) {
+     .foot p{
+         font-size: 0.8rem;
+     }
+     .foot label input{
+        height: 3.5vh;
+        width: 40vw;
+        font-size: 0.8rem;
+    }
+    .foot label button{
+        height: 5vh;
+        font-size: 0.8rem;
+    }
+    .foot table{
+       margin-left: 4vw;
+    }
+    .foot table thead{
+        font-size: 0.7rem;
+    }
+    .foot table tbody{
+        font-size: 0.7rem;
+    }
+}

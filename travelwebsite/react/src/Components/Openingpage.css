@@ -43,3 +43,23 @@ h2{
     font-weight:700;
     cursor:pointer;
 }
+@media only screen and (max-width:600px) {
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .get{
+        height: 6vh;
+        width:27vw;
+        margin: 0vh 2vw;
+        font-size: 0.7rem;
+    }
+    .trailer{
+        height: 6vh;
+        width:27vw;
+        font-size: 0.7rem;
+        margin: 0vh 2vw;
+    }
+}
