@@ -19,6 +19,10 @@ npm run build
 ```
 npm run lint
 ```
-
+### Project Description
+ It's a music player made with VueJS. It has basic features like seekbar,playlist,music controls and volume bar.
+### Screenshots
+ 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
