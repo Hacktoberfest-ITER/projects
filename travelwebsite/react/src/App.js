@@ -7,7 +7,7 @@ import Service from './Components/Service'
 import Contact from './Components/Contact'
 import LoadingBar from 'react-top-loading-bar'
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
-import { useState } from 'react';
+// import { useState } from 'react';
 function App() {
   return (
        <Router>

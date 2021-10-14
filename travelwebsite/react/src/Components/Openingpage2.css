@@ -30,7 +30,7 @@
     justify-content: center;
 }
 .box2{
-    margin: 1vh 2.9vw;
+    margin: 1vh 3vw;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 3px gray;
     overflow: hidden;
@@ -44,4 +44,33 @@
     padding: 2vh 0vw;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 600;
+}
+@media only screen and (max-width:600px) {
+    .flex1{
+        flex-direction: column;
+    }
+    .flex2{
+        flex-direction: column;
+    }
+    .box1 img{
+        height: 50vh;
+        width: 100vw;
+    }
+    .box2{
+        margin: 2vh 4vw;
+        width: 90vw;
+    }
+    .box2 img{
+        height: 50vh;
+        width: 90vw;
+    }
+    .box1 p{
+        font-size: 0.8rem;
+    }
+    .box2 p{
+        font-size: 0.8rem;
+    }
+    h3{
+        font-size: 0.9rem;
+    }
 }
