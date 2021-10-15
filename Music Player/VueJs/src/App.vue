@@ -1,7 +1,8 @@
 <template>
  <div class="wrapper">
-   <div class="player ">
-     <div class="upper quiet">
+   <div class="player">
+     <div class="play">
+       <div class="upper quiet">
     <div class="pic">
        <img :src=current.path alt="" id="song_img"/>
     </div>
@@ -11,21 +12,26 @@
        <br>
        <p style="text-align: center;">{{ current.artist }}</p>
        <br><br><br>
-       <input ref="volume_bar" type="range" min="0" max="100" value="60" :onchange="change_volume">
+       <input ref="volume_bar" id="vol" type="range" min="0" max="100" value="60" :onchange="change_volume">
        <p style="text-align: center;">Volume</p>
      </div>
     </div>
    <br><br>
+
    <input id="seekbar" ref="progress_bar" type="range" min="0" max="100" value="0" :onchange="change_duration">
     <div class="controls intr">
       <button class="previous" @click="prev"><img src="./assets/icons8-skip-to-start-50.png" alt=""></button>  
       <button class="play" v-if="!isPlaying" @click="play"><img src="./assets/icons8-circled-play-50.png" alt=""></button>
       <button class="pause" v-else @click="pause"><img src="./assets/icons8-pause-button-50.png" alt=""></button>
       <button class="next" @click="next"><img src="./assets/icons8-end-50.png" alt=""></button>
-     </div>     
+      
+     </div>  
+    </div>   
+    <div class="playlist" ref="playis">
+    <button v-for="song in songs" :key="song.src" @click="play(song)" :class="(song.src == current.src) ? 'song playing' : 'song'">{{ song.title }}</button>
    </div>
-   <div class="playlist">
    </div>
+   
  </div>
 </template>
 
@@ -197,13 +203,16 @@ methods: {
       this.player.volume=this.$refs.volume_bar.value/100;
     },
     updateTime: function() {
-            // Shorten down the activeTrack.currentTime
+            // Shorten 
             var cTime = this.player.currentTime;
             // Get the new value for the seekbar by multiplying the current time by
             // 100 divided by the duration
             var newTime = cTime * (100 / this.player.duration);
             // Update the seekbar
             this.$refs.progress_bar.value = newTime;
+    },
+    buttonplay (){
+      this.refs.playis.style.marginLeft="0px";
     }
   },
   created () {
@@ -237,7 +246,7 @@ methods: {
   display: block;
  }
  .controls{
-  margin: 0 30%;
+  margin-left: 30%;
  }
  button{
   background-color: white;
@@ -245,7 +254,7 @@ methods: {
 .wrapper{
   /*background-color: #cad4d1;*/
   background-color: whitesmoke;
-  padding: 78px 50px;
+  padding: 20px 50px;
 }
 .player{
   background-color: white;
@@ -262,9 +271,105 @@ methods: {
 }
 #seekbar{
   width: 435px;
+
+}
+input[type=range] {
+  height: 26px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 13px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #AC51B5;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 19px;
+  border-radius: 7px;
+  background: #65001C;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: white;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 13px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #AC51B5;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 19px;
+  border-radius: 7px;
+  background: #65001C;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 13px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #AC51B5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #AC51B5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 19px;
+  border-radius: 7px;
+  background: #65001C;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #AC51B5;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #AC51B5;
+}
+#playlist{
+  margin-left: 300px;
+  overflow: hidden;
+  position: relative;
 }
 #song_img{
   width:  200px;
   height: 200px;
 }
+
 </style>
