@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Alfa+Slab+One&family=Lobster&family=Podkova&family=Righteous&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Podkova', serif;
+
+}
+body{
+    color: white;
+    background-color: black;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+#signlog{
+    position: relative;
+    right: 0;
+
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#logsign{
+    float: right;
+    display: inline;
+    margin-top: 0;
+}
+#logsign ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+    border: 3px solid white;
+    border-radius: 1.5rem;
+}
+
+#logsign ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#logsign ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.btn{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 8px 35px;
+    margin-top: 8px;
+    border: 2px solid black;
+    border-radius: 10px;
+   
+}
+.btn:hover{
+    border: 4px solid blue;
+    background-color: black;
+    color: white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    /* background: url('bgzomato.jpg') no-repeat center center/cover; */
+    background-image:  url('/static/bgzomato.jpg') ;
+    top: 0;
+    height: 700px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    
+}
+/* .container h1{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+} */
+input{
+    display: block;
+    position: relative;
+    height: 35px;
+    width: 540px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+.myContactForm{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+#box1{
+    border: 4px solid black;
+    background-color: grey;
+    border-radius: 15px;
+    position: relative;
+    height: 450px;
+    width: 750px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+.center{
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    background-color: grey;
+}

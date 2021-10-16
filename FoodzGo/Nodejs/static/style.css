@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Alfa+Slab+One&family=Lobster&family=Podkova&family=Righteous&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Podkova', serif;
+
+}
+body{
+    color: white;
+    background-color: black;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+#signlog{
+    position: relative;
+    right: 0;
+
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#logsign{
+    float: right;
+    display: inline;
+    margin-top: 0;
+}
+#logsign ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+    border: 3px solid white;
+    border-radius: 1.5rem;
+}
+
+#logsign ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#logsign ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.button{
+    font-family: 'Times New Roman', Times, serif;
+    /* margin-left: 400px; */
+    /* position: relative; */
+    float: right;
+    /* right: 0%; */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+.h1{
+    font-family: 'Lobster', cursive;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    /* background: url('bgzomato.jpg') no-repeat center center/cover; */
+    background-image: url('/static/bgzomato.jpg');
+    top: 0;
+    height: 600px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    
+}
+.container h1{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+#locate{
+    border: 4px solid white;
+    background-color: grey;
+    padding: 2rem;
+    border-radius: 2rem;
+
+}
+.container p {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+#btn1{
+    border-color: white;
+    background-color: black;
+    padding:  0.89rem 2rem;
+    border-radius: 1.4rem;
+    cursor: pointer;
+    color: white;
+    border: 4px solid red;
+
+}
+#btn1:hover{
+    background-color: white;
+    color: black;
+}
+#locator{
+    padding: 0.89rem;
+    width: 400px;
+}
+/* .container ul{
+    display: flex;
+}
+.container ul li{ 
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.container ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.container ul li a:hover{
+    color: black;
+    background-color: white;
+} */
+#service-container{
+    background-color: rgb(105, 45, 18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    margin: 2.5rem;
+    border: 3px solid white;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    /* position:absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+img{
+    height: 300px;
+}
+.apps{
+    display: flex;
+    color: black;
+    /* font-size: 1.5rem; */
+    align-items: center;
+    justify-content: center;
+    border: 4px solid black;
+    border-radius: 5rem;
+    background-color: grey;
+    height: 387px;
+    width: 100%;
+
+}
+.sec1{
+    margin: 14px;
+}
+.sec1 h2{
+    font-size: 2.5rem;
+}
+.sec1 span{
+    font-size: 30px;
+}
+#i4{
+    height: 100px;
+    width: 300px;
+}
+#i5{
+    height: 100px;
+    width: 300px;
+}
+
+
+.sec2{
+    display: flex;
+    position: relative;
+    height: 400px;
+    width: auto;
+
+}
+.sec2 img{
+    height: 387px;
+}
+#contact{
+    display: grid;
+    grid-auto-flow: column;
+    grid-row-gap: auto;
+    border: white;
+
+}
+.seg ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+
+}
+
+.seg ul li a{
+    color: white;
+    display: block;
+    padding: 6px 0px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.seg ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.seg h2{
+    font-size: 2rem;
+}
+.center{
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    background-color: grey;
+}

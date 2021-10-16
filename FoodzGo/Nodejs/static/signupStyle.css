@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Alfa+Slab+One&family=Lobster&family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Lobster', cursive; */
+
+}
+body{
+    background-image: url('/static/perfect4.jpg') ;
+    color: white;
+}
+body
+html{
+    scroll-behavior: smooth;
+}
+#signlog{
+    position: relative;
+    right: 0;
+
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#heading{
+    margin-left: 430px;
+    font-size: 4.5rem;
+    font-family: 'Lobster', cursive;
+}
+.container{
+    border: 3px solid greenyellow;
+    border-radius: 15px;
+    position: absolute;
+    left: 450px;
+    height: 600px;
+    width: 600px;
+    font-family: 'Righteous', cursive;
+}
+#heading2{
+    position: relative;
+    left: 200px;
+}
+.top{
+    background-color: rgb(198, 255, 112);
+    color: black;
+    font-size: 25px;
+    
+}
+.top a{
+    text-decoration: none;
+    color: indigo;
+}
+form{
+    font-family: 'Acme', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    font-family: 'Acme', sans-serif;
+    position: relative;
+    left: 90px;
+    padding: 6px;
+    margin: 8px;
+    height: 15px;
+    width: 400px;
+}
+
+button{
+    font-family: 'Acme', sans-serif;
+    padding: 6px 25px;
+    position: relative;
+    width: 180px;
+    left: 210px;
+    background-color: rgb(255, 234, 47);
+    color: rgb(0, 31, 116);
+    outline: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+button:hover{
+    background-color: cadetblue;
+    color: black;
+}
+#heading3{
+    position: relative;
+    left: 80px;
+}
+#heading4{
+    position: relative;
+    left: 280px;
+}
+.other{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    /* flex-direction: row; */
+}
+.other a{
+    border: 4px solid grey;
+    text-decoration: none;
+    color: lawngreen;
+    font-size: 20px;
+    border-radius: 6px;
+
+}
+#gg{
+    padding: 6px 19px;
+    
+}
+#fb{
+    margin-top: 3px;
+    padding: 6px 10px;
+    
+}
+#gg:hover, #fb:hover{
+    background-color: lawngreen;
+    color: black;
+}
