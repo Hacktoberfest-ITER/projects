@@ -1,0 +1,42 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title FoodZGo - Sign Up
+  link(rel='stylesheet' href='/static/signupStyle.css')
+#head
+  nav#navbar
+    ul
+      li.items
+        a(href='/') Home
+      // <li class="items"><a href="#service-container">Services</a></li>
+      li.items
+        a(href='/addres' target='_blank') Add Your Restaurant
+      li.items
+        a(href='/contact') Contact Us
+      //
+        <li class="items button" id="login"> </li>
+        <li class="items button" id="signup"></li>
+h1#heading Welcome To FoodzGo!
+.container
+  .top
+    h2#heading2 SIGN UP
+    br
+    p
+      a(href='/login')  Or, LogIn To Your Account
+  hr
+  .box
+    form(action='/signup' method='post')
+      input(type='text' name='mobile' placeholder='Phone Number')
+      input(type='text' name='username' placeholder='Name')
+      input(type='text' name='emailID' placeholder='Email')
+      input(type='text' name='locality' placeholder='Address')
+      input(type='password' name='password' placeholder='Create Your Password')
+      input(type='password' name='cpassword' placeholder='Confirm Your Password')
+      button Create And Continue
+      h4#heading3 By creating an account, I accept the Terms &amp; Conditions &amp; Privacy Policy
+  h2#heading4 OR
+  .other
+    a#gg(href='https://accounts.google.com/' target='__blank') Continue With Google 
+    a#fb(href='https://m.facebook.com/' target='__blank') Continue With Facebook 

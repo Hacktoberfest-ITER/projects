@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Alfa+Slab+One&family=Lobster&family=Podkova&family=Righteous&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Podkova', serif;
+
+}
+body{
+    background-image: url('/static/perfect4.jpg') ;
+    color: white;
+}
+body
+html{
+    scroll-behavior: smooth;
+}
+#signlog{
+    position: relative;
+    right: 0;
+
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#sorry{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    left: 350px;
+}
+.container{
+    margin-left: 350px;
+    margin-top: 20px;
+}
+.box{
+    display: flex;
+    height: 400px;
+    position: relative;
+    left: 170px;
+}
+#box-1 img{
+    position:relative;
+    height: 350px;
+    width: 350px;
+    margin-left: 20px;
+    border: 4px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+#box-2 img{
+    position:relative;
+    height: 350px;
+    width: 350px;
+    margin-left: 20px;
+    border: 4px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+#box-3 img{
+    position:relative;
+    height: 350px;
+    width: 350px;
+    margin-left: 20px;
+    border: 4px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}

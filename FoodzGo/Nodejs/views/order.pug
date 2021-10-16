@@ -1,0 +1,574 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='/static/orderStyle.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  script.
+    window.addEventListener('load', ()=>{
+    const params= (new URL(document.location)).searchParams
+    const loc=params.get('locator');
+    document.getElementById('test').innerHTML=loc;
+    })
+#mid-head
+  nav#content
+    ul
+      li#s1.section
+        h2
+          span#test
+      li#s2.section
+        ul
+          li.sec
+            input#search(type='text' name='search' placeholder='Search Your Favorite')
+          li.sec
+            a(href='/error') Help
+          li.sec
+            a(href='/signin') Sign In
+          li.sec
+            a(href='/error')
+              i.fa.fa-shopping-cart
+              |  Cart
+.offer
+  #offer-b-1.load
+    img(src='/static/offer1.jpg' alt='Offer 1')
+  #offer-b-2.load
+    img(src='/static/offer2.jpg' alt='Offer 2')
+  #offer-b-3.load
+    img(src='/static/offer3.jpg' alt='Offer 3')
+  #offer-b-4.load
+    img(src='/static/offer4.jpg' alt='Offer 4')
+.foods
+  .reso
+    h1 175 Restaurants Found
+  .box
+    .inside
+      .p-1
+        img(src='/static/item1.jpg' alt='')
+      .p-2
+        h1 Somya Family Restaurant
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.9
+          p 5000+ Ratings
+        .ele
+          h3 20 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for Two
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item2.jpg' alt='')
+      .p-2
+        h1 Royal Tiffin Centre
+        br
+        h3 North Indian, Snacks
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.5
+          p 5000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 50
+          p Cost for four
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item3.png' alt='')
+      .p-2
+        h1 K F C
+        br
+        h3 Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.3
+          p 5000+ Ratings
+        .ele
+          h3 40 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 350
+          p Cost for One
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item4.jpg' alt='')
+      .p-2
+        h1 Tulsi Restro Farm
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 3.8
+          p 5000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 80
+          p Cost for One
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item5.jpg' alt='')
+      .p-2
+        h1 Swaraj Foodz
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese
+        .ele
+          h3
+            i.fa.fa-star
+            | 2.9
+          p 4500+ Ratings
+        .ele
+          h3 20 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for One
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item6.jpg' alt='')
+      .p-2
+        h1 Devil Food Court
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.5
+          p 3000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 100
+          p Cost for four
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item7.jpg' alt='')
+      .p-2
+        h1 Star War Biritani
+        br
+        h3 Biryani, Tandoor, Chinese
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.0
+          p 4000+ Ratings
+        .ele
+          h3 10 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for One
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item8.jpg' alt='')
+      .p-2
+        h1 Creamy Centre
+        br
+        h3 Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 3.7
+          p 2000+ Ratings
+        .ele
+          h3 20 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 80
+          p Cost for One
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item9.jpg' alt='')
+      .p-2
+        h1 Madhuban Restaurant
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 3.5
+          p 4500+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for Two
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item10.jpg' alt='')
+      .p-2
+        h1 Easy Taste
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.5
+          p 5000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 150
+          p Cost for four
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item11.jpg' alt='')
+      .p-2
+        h1 Somya Family Restaurant
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 3.5
+          p 5000+ Ratings
+        .ele
+          h3 38 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for Two
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item12.jpg' alt='')
+      .p-2
+        h1 Royal Tiffin Centre
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.5
+          p 5000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 50
+          p Cost for four
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item13.jpg' alt='')
+      .p-2
+        h1 Somya Family Restaurant
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 3.5
+          p 5000+ Ratings
+        .ele
+          h3 38 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for Two
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item14.jpg' alt='')
+      .p-2
+        h1 Big Bite Bistro
+        br
+        h3 Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.5
+          p 5000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 50
+          p Cost for four
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item19.jpg' alt='')
+      .p-2
+        h1 Somya Family Restaurant
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 3.5
+          p 5000+ Ratings
+        .ele
+          h3 38 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for Two
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item20.jpg' alt='')
+      .p-2
+        h1 Royal Tiffin Centre
+        br
+        h3 North Indian, Snacks
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.5
+          p 5000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 50
+          p Cost for four
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item15.jpg' alt='')
+      .p-2
+        h1 Green Chillyz
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 3.5
+          p 5000+ Ratings
+        .ele
+          h3 38 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 450
+          p Cost for Two
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item16.jpg' alt='')
+      .p-2
+        h1 Street Foods By Grill
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.0
+          p 4500+ Ratings
+        .ele
+          h3 28 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 250
+          p Cost for One
+        .p-3
+          a(href='#') Order Now
+  .box
+    .inside
+      .p-1
+        img(src='/static/item17.jpg' alt='')
+      .p-2
+        h1 Keshari Garnish
+        br
+        h3 North Indian, Biryani, Tandoor, Chinese, Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.0
+          p 5000+ Ratings
+        .ele
+          h3 35 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 350
+          p Cost for Two
+        .p-3
+          a(href='#') Order Now
+    .inside
+      .p-1
+        img(src='/static/item18.jpg' alt='')
+      .p-2
+        h1 Refresh Live Cafe
+        br
+        h3 Snacks, Desserts, Beverages
+        .ele
+          h3
+            i.fa.fa-star
+            | 4.5
+          p 5000+ Ratings
+        .ele
+          h3 30 mins
+          p Delivery Time
+        .ele
+          h3
+            i.fa.fa-inr
+            | 200
+          p Cost for four
+        .p-3
+          a(href='#') Order Now
+.apps
+  .sec1
+    h2 Restaurants in your pocket
+    span
+      | Order from your favorite restaurants &amp; track on the go, with the all-new FoodzGo app.
+    a.logo2(href='#')
+      img#i4(src='/static/i4.png' alt='')
+    a.logo2(href='#')
+      img#i5(src='/static/i5.png' alt='')
+  .sec2
+    img(src='/static/phone.png' alt='')
+#contact
+  #lis-1.seg
+    h2 COMPANY:
+    ul
+      li.version
+        a(href='#') Who we are
+      li.version
+        a(href='#') Team
+      li.version
+        a(href='#') Career
+      li.version
+        a(href='#') Blog
+      li.version
+        a(href='#') Investor Relations
+  #lis-2.seg
+    h2 FOR FOODIES:
+    ul
+      li.version
+        a(href='#') Code of Contact
+      li.version
+        a(href='#') Bloggers Help
+      li.version
+        a(href='#') Community
+      li.version
+        a(href='#') Mobile Apps
+  #lis-3.seg
+    h2 FOR RESTAURANTS:
+    ul
+      li.version
+        a(href='#') Add Restaurant
+      li.version
+        a(href='#') Business Community
+      li.version
+        a(href='#') Products for Business
+      li.version
+        a(href='#') Business Widgets
+  #lis-4.seg
+    h2 LEGAL:
+    ul
+      li.version
+        a(href='#') Terms And Conditions
+      li.version
+        a(href='#') Refund And Cancellation
+      li.version
+        a(href='#') Cookies Policy
+      li.version
+        a(href='#') Privacy Policy
+      li.version
+        a(href='#') Offers Terms
+      li.version
+        a(href='#') Phishing And Fraud
+      // <li class="version"><a href="#">Privacy Policy</a></li>
+  #lis-5.seg
+    h2 SOCIAL LINKS:
+    ul
+      li.version
+        a(href='https://www.facebook.com/soumyaranjan.jena.18659041/') FaceBook 
+      li.version
+        a(href='https://www.instagram.com/soumya_ranjan001/') Instagram 
+      li.version
+        a(href='https://twitter.com/SomyaRa22225420') Twitter 
+      li.version
+        a(href='https://github.com/somyarj1637') GitHub 
+      li.version
+        a(href='https://www.linkedin.com/in/somya-ranjan-jena-58b07520a/') LinkedIn  
+ul
+footer
+  .center
+    | Copyright &copy; www.FoodzGO.com. All rights reserved!

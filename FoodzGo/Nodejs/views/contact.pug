@@ -1,0 +1,49 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Contact Us
+  link(rel='stylesheet' href='/static/contactStyle.css')
+#head
+  nav#navbar
+    ul
+      li.items
+        a(href='/') Home
+      // <li class="items"><a href="#service-container">Services</a></li>
+      li.items
+        a(href='/addres' target='_blank') Add Your Restaurant
+      li.items
+        a(href='/contact') Contact Us
+      //
+        <li class="items button" id="login"> </li>
+        <li class="items button" id="signup"></li>
+  nav#logsign
+    ul
+      li.values
+        a(href='/login') LOG in
+      li.values
+        a(href='/signup') SIGN up
+.container
+  h2 For Food Queries or Customer Services related queries , Fill this form below...
+  #box1.box
+    form.myContactForm(action='/contact' method='post')
+      input.mycontactinput(type='text' name='name' placeholder='Enter your Name')
+      input.mycontactinput(type='text' name='phone' placeholder='Enter your Phone number')
+      input.mycontactinput(type='email' name='email' placeholder='Enter your Email ID')
+      input.mycontactinput(type='text' name='address' placeholder='Enter your Address')
+      input#area1.mycontactinput(type='text' name='desc' placeholder='Submit your Qurey...')
+      button.btn
+        | Submit
+  h3
+    | Didn&apos;t got response from US!
+  h3
+    | Mail us at somyarj@foodzgo.com
+br
+br
+br
+br
+br
+footer
+  .center
+    | Copyright &copy; www.FoodzGO.com. All rights reserved!

@@ -1,0 +1,42 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login - FoodzGo
+  link(rel='stylesheet' href='/static/loginStyle.css')
+  | &#x325;
+#head
+  nav#navbar
+    ul
+      li.items
+        a(href='/') Home
+      // <li class="items"><a href="#service-container">Services</a></li>
+      li.items
+        a(href='/addres' target='_blank') Add Your Restaurant
+      li.items
+        a(href='/contact') Contact Us
+      //
+        <li class="items button" id="login"> </li>
+        <li class="items button" id="signup"></li>
+h1#heading Welcome To FoodzGo !
+.container
+  .mylogin
+    h2#heading2 LOG IN
+    form(action='/login' method='post')
+      h3 Username
+      input(type='text' name='userID' placeholder='Enter UserID')
+      h3 Password
+      input(type='password' name='password' placeholder='Enter Password')
+      br
+      button#submit Get Started
+    h3#heading3 OR
+    .other
+      a#gg(href='https://accounts.google.com/' target='__blank') Continue With Google 
+      a#fb(href='https://m.facebook.com/' target='__blank') Continue With Facebook 
+  h3#last
+    p New to FoodzGo ? &nbsp; 
+    a(href='/signup')  Create new Account
+footer
+  .center
+    | Copyright &copy; www.FoodzGO.com. All rights reserved!

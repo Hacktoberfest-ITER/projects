@@ -1,0 +1,154 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title FoodzGo Online Service
+  link(rel='stylesheet' href='/static/style.css')
+  script.
+    function take(){
+    var b=document.getElementById('locator').value;
+    document.getElementById('test').innerHTML=b;
+    }
+#head
+  nav#navbar
+    ul
+      li.items
+        a(href='/') Home
+      li.items
+        a(href='#service-container') Services
+      li.items
+        a(href='/addres' target='_blank') Add Your Restaurant
+      li.items
+        a(href='/contact') Contact Us
+      //
+        <li class="items button" id="login"> </li>
+        <li class="items button" id="signup"></li>
+  nav#logsign
+    ul
+      li.values
+        a(href='/login') LOG in
+      li.values
+        a(href='/signup') SIGN up
+#home.container
+  h1.h1 Welcome to FoodzGo !
+  p.h1 Find the best restaurants, caf&eacute;s and bars in India
+  br
+  br
+  br
+  br
+  br
+  #locate
+    p.h1 Order food from favourite restaurants near you.
+    form(action='/order' method='GET')
+      input#locator(name='locator' type='text' placeholder='Enter your location')
+      button#btn1 ORDER NOW
+  //
+    <span>POPULAR CITIES IN INDIA</span>
+    <ul>
+    <li class="city"><a href="#">Ahemdabad</a></li>
+    <li class="city"><a href="#">Bangalore</a></li>
+    <li class="city"><a href="#">Mumabai</a></li>
+    <li class="city"><a href="#">Kolkata</a></li>
+    <li class="city"><a href="#">Chennai</a></li>
+    <li class="city"><a href="#">Bhubaneswar</a></li>
+    <li class="city"><a href="#">Howrah</a></li>
+    <li class="city"><a href="#">Delhi</a></li>
+    <li class="city"><a href="#">Raipur</a></li>
+    <li class="city"><a href="#">Hyderbad</a></li>
+    <li class="city"><a href="#">AND MANY MORE</a></li>
+    </ul>
+// <h1 >OUR SERVICES</h1>
+#service-container
+  #box-1.box
+    img(src='/static/i1.png' alt='')
+    h2 No Minimum Order
+  // <p>Order in for yourself or for the group, with no restrictions on order value</p>
+  #box-2.box
+    img(src='/static/i2.png' alt='')
+    h2 Lightning-Fast Delivery
+    // <p>Know where your order is at all times, from the restaurant to your doorstep</p>
+  #box-3.box
+    img(src='/static/i3.png' alt='')
+    h2 Live Order Tracking
+    // <p>Experience FoodzGo's superfast delivery for food delivered fresh & on time</p>
+.apps
+  .sec1
+    h2 Restaurants in your pocket
+    span
+      | Order from your favorite restaurants &amp; track on the go, with the all-new FoodzGo app.
+    a.logo2(href='#')
+      img#i4(src='/static/i4.png' alt='')
+    a.logo2(href='#')
+      img#i5(src='/static/i5.png' alt='')
+  .sec2
+    img(src='/static/phone.png' alt='')
+#contact
+  #lis-1.seg
+    h2 COMPANY:
+    ul
+      li.version
+        a(href='#') Who we are
+      li.version
+        a(href='#') Team
+      li.version
+        a(href='#') Career
+      li.version
+        a(href='#') Blog
+      li.version
+        a(href='#') Investor Relations
+  #lis-2.seg
+    h2 FOR FOODIES:
+    ul
+      li.version
+        a(href='#') Code of Contact
+      li.version
+        a(href='#') Bloggers Help
+      li.version
+        a(href='#') Community
+      li.version
+        a(href='#') Mobile Apps
+  #lis-3.seg
+    h2 FOR RESTAURANTS:
+    ul
+      li.version
+        a(href='#') Add Restaurant
+      li.version
+        a(href='#') Business Community
+      li.version
+        a(href='#') Products for Business
+      li.version
+        a(href='#') Business Widgets
+  #lis-4.seg
+    h2 LEGAL:
+    ul
+      li.version
+        a(href='#') Terms And Conditions
+      li.version
+        a(href='#') Refund And Cancellation
+      li.version
+        a(href='#') Cookies Policy
+      li.version
+        a(href='#') Privacy Policy
+      li.version
+        a(href='#') Offers Terms
+      li.version
+        a(href='#') Phishing And Fraud
+      // <li class="version"><a href="#">Privacy Policy</a></li>
+  #lis-5.seg
+    h2 SOCIAL LINKS:
+    ul
+      li.version
+        a(href='https://www.facebook.com/soumyaranjan.jena.18659041/') FaceBook 
+      li.version
+        a(href='https://www.instagram.com/soumya_ranjan001/') Instagram 
+      li.version
+        a(href='https://twitter.com/SomyaRa22225420') Twitter 
+      li.version
+        a(href='https://github.com/somyarj1637') GitHub 
+      li.version
+        a(href='https://www.linkedin.com/in/somya-ranjan-jena-58b07520a/') LinkedIn
+ul
+footer
+  .center
+    | Copyright &copy; www.FoodzGO.com. All rights reserved!
