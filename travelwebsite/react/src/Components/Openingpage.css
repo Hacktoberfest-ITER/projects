@@ -2,16 +2,23 @@
 .bg{
     padding-top: 5vh;
     min-height: 100vh;
-    background-image: url("../Images/Adventure.png");
+    /* background-image: url("../Images/Adventure.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: rgba(255, 255, 255, 0.87);
     font-family: 'Mukta', sans-serif;
+}
+video{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    object-fit:cover;
+    height: 100vh;
 }
 h1{
     font-size: 4rem;

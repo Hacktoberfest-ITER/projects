@@ -3,6 +3,7 @@ import Footer from './Components/Footer';
 import Navbar from './Components/Navbar'
 import Openingpage from './Components/Openingpage';
 import Openingpage2 from './Components/Openingpage2';
+import Home from './Components/Home'
 import Service from './Components/Service'
 import Contact from './Components/Contact'
 import LoadingBar from 'react-top-loading-bar'
@@ -18,7 +19,8 @@ function App() {
           <Navbar/>
           <Openingpage/>
           <Openingpage2/>
-          <Switch>
+          <Switch> 
+            <Route  path="/Home.js"><Home/></Route>
             <Route  path="/Service.js"><Service/></Route>
             <Route  path="/Contact.js"><Contact/></Route>
           </Switch>
