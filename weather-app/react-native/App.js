@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, View, SafeAreaView,StatusBar } from 'react-native';
+import SearchBar from './components/SearchBar';
 import WeatherUi from './components/WeatherUi';
 
 const API_KEY = 'c5212ff223c381bf600ca14a06be152c'
@@ -28,7 +29,7 @@ export default function App() {
   }
 
   useEffect(() =>{
-    fetchWeather('Kharagpur');
+    fetchWeather('Delhi');
     // console.log(weatherData)
   },[])
 
@@ -40,13 +41,16 @@ export default function App() {
     )
   } else if(weatherData == null){
     return(
-      <View></View>
+      <View style={styles.activityContainer}>
+        <SearchBar fetchWeather={fetchWeather}/>
+        <Text style={styles.errMsg}>City Not Found!!! Try different city</Text>
+      </View>
     )
   }
 
   return (
     <SafeAreaView style={styles.container}>
-      <WeatherUi weatherData={weatherData} />
+      <WeatherUi weatherData={weatherData} fetchWeather={fetchWeather} />
     </SafeAreaView>
   );
 }
@@ -64,5 +68,12 @@ const styles = StyleSheet.create({
     alignItems:'center',
     backgroundColor:'#979797',
     justifyContent:'center',
+  },
+  errMsg:{
+    fontSize:26,
+    fontWeight:'bold',
+    color:'#c21b0c',
+    marginTop:10,
+    textAlign:'center',
   }
 });
