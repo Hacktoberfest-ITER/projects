@@ -8,9 +8,9 @@ export default function Navbar() {
                 <ul className="flex">
                     <Link className="travel" to="/">TRVL</Link>
                     <div className="menu1">
-                        <Link to="/" className="menu">HOME</Link>
-                        <Link to="Service.js" className="menu">SERVICE</Link>
-                        <Link to="Contact.js" className="menu">CONTACT</Link>
+                        <Link to="/Home.js" className="menu">HOME</Link>
+                        <Link to="/Service.js" className="menu">SERVICE</Link>
+                        <Link to="/Contact.js" className="menu">CONTACT</Link>
                     </div>
                     <button className="signup">SIGN UP</button>
                 </ul>
