@@ -1,0 +1,74 @@
+body {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(226, 209, 255);
+  display: block;
+  justify-content: center;
+}
+
+img {
+  display: inner-flex;
+  font-size: 22px;
+  color: rgb(89, 0, 255);
+  border-radius: 6px;
+  border: 1px solid rgb(226, 209, 255);
+  width: 300px;
+  height: 300px;
+}
+
+picture {
+  display: none;
+}
+
+#load {
+  display: block;
+}
+
+@media (min-width: 300px) {
+  #load {
+    display: none;
+  }
+  picture {
+    display: block;
+  }
+}
+.bn632-hover {
+  width: 120px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn24 {
+  background-image: linear-gradient(
+    to right,
+    #6253e1,
+    #852d91,
+    #a3a1ff,
+    #f24645
+  );
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
