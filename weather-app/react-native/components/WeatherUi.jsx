@@ -4,9 +4,7 @@ import SearchBar from './SearchBar'
 import {tornado,thunderstrome,snow,sand,rain,moon,mist,haze,dust,clearM,clouds} from '../assets/index'
 
 
-const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June","July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const getCurrentDate=()=>{
     const d = new Date();
@@ -21,7 +19,7 @@ const getCurrentDate=()=>{
 
 const hours = new Date().getHours();
 
-const WeatherUi = ({weatherData}) => {
+const WeatherUi = ({weatherData, fetchWeather}) => {
 
     const [Wicon, setWicon] = useState(null)
     const {weather,
@@ -54,20 +52,19 @@ const WeatherUi = ({weatherData}) => {
     
 
     return (
-        <View style={styles.container}>
+        <View>
             {/* search-bar */}
-            {/* cityname */}
-            <View style={styles.sub1}>
-                <Text style={{fontSize:26, fontWeight:'bold',color:'white'}}>{name}</Text>
-                <Text style={{fontSize:16, marginVertical:6,color:'white'}}>{getCurrentDate()}</Text>
-            </View>
-            {/* today's date */}
-            {/* weather-icon main descp temp ->column*/}
+            <SearchBar fetchWeather={fetchWeather} />
+
+            {/* cityname today's date weather-icon main descp temp ->column*/}
             <View style={styles.sub2}>
+            <Text style={{fontSize:26, fontWeight:'bold',color:'white'}}>{name}</Text>
+                <Text style={{fontSize:16, marginVertical:6,color:'white'}}>{getCurrentDate()}</Text>
+                <View style={{height:40}}/>
                 <Image source={Wicon} style={styles.icons} resizeMode='contain' />
                 <Text style={{fontSize:26, fontWeight:'bold',color:'white'}}>{main}</Text>
                 <Text style={{fontSize:20, marginVertical:6,color:'white'}}>{description}</Text>
-                <Text style={{fontSize:24, fontWeight:'bold',color:'white'}}>{temp}°C</Text>
+                <Text style={{fontSize:24, fontWeight:'bold',color:'white'}}>{temp} °C</Text>
             </View>
             {/* min-temp max-temp  wind  humidity ->row*/}
             <View style={styles.sub3}>
@@ -88,7 +85,7 @@ const WeatherUi = ({weatherData}) => {
                 <View style={styles.rowBox}>
                     <Text style={{fontSize:16,color:'white', fontWeight:'bold'}}>Humidity</Text>
                     <View style={styles.subBox}>
-                    <Text style={{fontSize:16, marginVertical:4,color:'white',marginRight:2}}>{humidity}</Text>
+                    <Text style={{fontSize:16, marginVertical:4,color:'white'}}>{humidity}</Text>
                     <Text style={{fontSize:16, fontWeight:'bold',color:'white'}}>%</Text>
                     </View>
                 </View>
@@ -98,14 +95,6 @@ const WeatherUi = ({weatherData}) => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop:40,
-    },
-    sub1:{
-        justifyContent:'center',
-        alignItems:'center'
-    },
     sub2:{
         flex:1,
         alignItems:'center',
@@ -120,7 +109,7 @@ const styles = StyleSheet.create({
     sub3:{
         flexDirection:'row',
         alignItems:'center',
-        marginBottom:40,
+        marginVertical:30,
     },
     rowBox:{
         // width:80, 
