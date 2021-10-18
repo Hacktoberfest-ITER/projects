@@ -12,7 +12,7 @@ export default function App() {
   const [weatherData, setWeatherData] = useState(null)
   const [loaded, setLoaded] = useState(true)
   const [errorMsg, setErrorMsg] = useState('');
-  const [location, setLocation ] = useState(null);
+  // const [location, setLocation ] = useState(null);
   const [city, setCity ] = useState();
 
   async function fetchWeather(cityName){
@@ -38,13 +38,13 @@ export default function App() {
   } , []);
 
   const runFunction = async () => {
-    let {status} = await Location.requestBackgroundPermissionsAsync();
+    let {status} = await Location.requestForegroundPermissionsAsync();
     if (status !== 'granted') {
         setErrorMsg('Access to Location denied');
     }
 
     const location = await Location.getCurrentPositionAsync({});
-    setLocation(location)
+    // setLocation(location)
 
     const place = await Location.reverseGeocodeAsync({
         latitude : location.coords.latitude,
