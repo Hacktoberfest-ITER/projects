@@ -12,4 +12,4 @@ This weather app shows the current temperature in Celcius, wind speed, humidity,
 
 ## Screenshot
 
-<img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/home_screen.png" height="420"/> <img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/search_screen.png" height="420"/>
+<img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/home_screen.png" height="500"/> <img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/search_screen.png" height="500"/>
