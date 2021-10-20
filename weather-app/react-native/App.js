@@ -12,7 +12,6 @@ export default function App() {
   const [weatherData, setWeatherData] = useState(null)
   const [loaded, setLoaded] = useState(true)
   const [errorMsg, setErrorMsg] = useState('');
-  // const [location, setLocation ] = useState(null);
   const [city, setCity ] = useState();
 
   async function fetchWeather(cityName){
@@ -44,7 +43,6 @@ export default function App() {
     }
 
     const location = await Location.getCurrentPositionAsync({});
-    // setLocation(location)
 
     const place = await Location.reverseGeocodeAsync({
         latitude : location.coords.latitude,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {StyleSheet, TextInput, Pressable, KeyboardAvoidingView,Platform } from 'react-native'
+import {StyleSheet, TextInput, Pressable,View } from 'react-native'
 import { FontAwesome5 } from '@expo/vector-icons';
 
 const SearchBar = ({fetchWeather}) => {
@@ -7,18 +7,19 @@ const SearchBar = ({fetchWeather}) => {
     const [cityName, setCityName] = useState('')
 
     return (
-        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding" : "height"}>
+        <View style={styles.container}>
             <TextInput
             placeholder='Enter City Name'
             value={cityName}
             onChangeText={(text)=>setCityName(text)}
             style={styles.searchBar}
             maxLength={25}
+            returnKeyType='search'
             />
             <Pressable style={styles.btn} onPress={() => fetchWeather(cityName)}>
             <FontAwesome5 name="search" size={22} color="#fff" />
             </Pressable>
-        </KeyboardAvoidingView>
+        </View>
     )
 }
 
