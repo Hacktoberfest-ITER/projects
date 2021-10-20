@@ -14,4 +14,4 @@ This weather app shows the current temperature in Celcius, wind speed, humidity,
 
 <img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/home_screen.png" height="500"/> <img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/search_screen.png" height="500"/>
 
-> \*\*There is chance that when you run it for first time it will not detect location automatically, for that you have to press "CTRL + s" in app.js file then it detect your location. This problem occur because permission page and home both are same, I'm working on it to fix this problem.
+> \*\*There is chance that when you run it for first time it will not detect location automatically, for that you have to press "CTRL + s" in app.js file then it will detect your location. This problem occur because permission page and home both are same, I'm working on it to fix this problem.
