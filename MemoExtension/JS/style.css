@@ -1,6 +1,6 @@
 body {
-  width: 300px;
-  height: 300px;
+  width: auto;
+  height: auto;
   background-color: rgb(226, 209, 255);
   display: block;
   justify-content: center;
