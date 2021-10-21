@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { View, Text, StyleSheet, Dimensions, Image } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, Image, Platform,KeyboardAvoidingView } from 'react-native'
 import SearchBar from './SearchBar'
 import {tornado,thunderstrome,snow,sand,rain,moon,mist,haze,dust,clearM,clouds} from '../assets/index'
 
@@ -52,7 +52,10 @@ const WeatherUi = ({weatherData, fetchWeather}) => {
     
 
     return (
-        <View>
+        <KeyboardAvoidingView
+        behavior={Platform.OS == "ios" ? "padding" : "height"}
+        keyboardVerticalOffset={Platform.OS == "ios" ? 0 : 20}
+        enabled={Platform.OS === "ios" ? true : false}>
             {/* search-bar */}
             <SearchBar fetchWeather={fetchWeather} />
 
@@ -76,7 +79,7 @@ const WeatherUi = ({weatherData, fetchWeather}) => {
                     </View>
                 </View>
                 <View style={styles.rowBox}>
-                    <Text style={{fontSize:16,color:'white', fontWeight:'bold'}}>Wind Speed</Text>
+                    <Text style={{fontSize:16,color:'white', fontWeight:'bold',textAlign:'center'}}>Wind Speed</Text>
                     <View style={styles.subBox}>
                     <Text style={{fontSize:16, marginVertical:4, marginRight:2,color:'white'}}>{speed}</Text>
                     <Text style={{fontSize:16, fontWeight:'bold',color:'white'}}>m/s</Text>
@@ -90,7 +93,7 @@ const WeatherUi = ({weatherData, fetchWeather}) => {
                     </View>
                 </View>
             </View>
-        </View>
+            </KeyboardAvoidingView>
     )
 }
 
