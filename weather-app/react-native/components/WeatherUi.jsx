@@ -1,8 +1,19 @@
 import React, {useState, useEffect} from 'react'
 import { View, Text, StyleSheet, Dimensions, Image, Platform,KeyboardAvoidingView } from 'react-native'
 import SearchBar from './SearchBar'
-import {tornado,thunderstrome,snow,sand,rain,moon,mist,haze,dust,clearM,clouds} from '../assets/index'
-
+import {
+    tornado, 
+    thunder, 
+    snow,
+    rain,
+    moon,
+    mist,
+    haze,
+    dust,
+    sun,
+    clouds
+} from '../assets/index'
+import LottieView from "lottie-react-native";
 
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June","July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -21,7 +32,7 @@ const hours = new Date().getHours();
 
 const WeatherUi = ({weatherData, fetchWeather}) => {
 
-    const [Wicon, setWicon] = useState(null)
+    const [weatherImg, setWeatherImg] = useState(haze)
     const {weather,
             name,
             main:{temp,humidity,pressure},
@@ -29,23 +40,22 @@ const WeatherUi = ({weatherData, fetchWeather}) => {
     } = weatherData
     const [{main, description}] = weather
 
-    function getWicon(weather){
+    function getWeatherImg(weather){
         if(weather === 'Tornado') return tornado
-        if(weather === 'Thunderstorm') return thunderstrome
+        if(weather === 'Thunderstorm') return thunder
         if(weather === 'Snow') return snow
-        if(weather === 'Sand') return sand
         if(weather === 'Rain') return rain
         if(weather === 'Clear' && hours>12) return moon
         if(weather === 'Mist') return mist
         if(weather === 'Haze') return haze
         if(weather === 'Dust') return dust
-        if(weather === 'Clear'&& hours<=12) return clearM
+        if(weather === 'Clear'&& hours<=12) return sun
         if(weather === 'Clouds') return clouds
         return haze
     }
 
     useEffect(()=>{
-        setWicon(getWicon(main))
+        setWeatherImg(getWeatherImg(main))
     },[weatherData])
 
 
@@ -61,10 +71,17 @@ const WeatherUi = ({weatherData, fetchWeather}) => {
 
             {/* cityname today's date weather-icon main descp temp ->column*/}
             <View style={styles.sub2}>
-            <Text style={{fontSize:26, fontWeight:'bold',color:'white'}}>{name}</Text>
+            <Text style={{fontSize:30, fontWeight:'bold',color:'white'}}>{name}</Text>
                 <Text style={{fontSize:16, marginVertical:6,color:'white'}}>{getCurrentDate()}</Text>
                 <View style={{height:40}}/>
-                <Image source={Wicon} style={styles.icons} resizeMode='contain' />
+               
+                <LottieView
+					style={{ height: 200 }}
+					source={weatherImg}
+					autoPlay
+					speed={3}
+                    loop 
+				/>
                 <Text style={{fontSize:26, fontWeight:'bold',color:'white'}}>{main}</Text>
                 <Text style={{fontSize:20, marginVertical:6,color:'white'}}>{description}</Text>
                 <Text style={{fontSize:24, fontWeight:'bold',color:'white'}}>{temp} °C</Text>
