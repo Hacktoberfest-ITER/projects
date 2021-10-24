@@ -79,7 +79,6 @@ const WeatherUi = ({weatherData, fetchWeather}) => {
 					style={{ height: 200 }}
 					source={weatherImg}
 					autoPlay
-					speed={3}
                     loop 
 				/>
                 <Text style={{fontSize:26, fontWeight:'bold',color:'white'}}>{main}</Text>
