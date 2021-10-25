@@ -19,8 +19,10 @@ This weather app shows the current temperature in Celcius, wind speed, humidity,
 
 ## 🚀 How to use
 
+- You need to register at [OpenWeather](https://openweathermap.org/api) and get an API key
 - Install packages with `yarn` or `npm install`.
   - If you have native iOS code run `npx pod-install`
+- Add the API key to the "App.js" file in line **8**
 - Run `expo start` to start the bundler.
 - Open the project in a React runtime to try it:
   - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
@@ -32,6 +34,7 @@ This weather app shows the current temperature in Celcius, wind speed, humidity,
 <img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/home_screen.png" height="500"/> <img src="https://github.com/abhishek622/projects/blob/main/weather-app/react-native/assets/search_screen.png" height="500"/>
 
 ## 📝 Notes
+
 - Learn more about [Universal React](https://docs.expo.dev/).
 - See what openWeather API are [current weather data](https://openweathermap.org/current).
 
