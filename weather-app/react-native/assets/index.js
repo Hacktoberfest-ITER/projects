@@ -1,13 +1,12 @@
-const clouds = require('./icons/clouds.png')
-const clearM = require('./icons/clearM.png')
-const dust = require('./icons/dust.png')
-const haze = require('./icons/haze.png')
-const mist = require('./icons/mist.png')
-const moon = require('./icons/moon.png')
-const rain = require('./icons/rain.png')
-const sand = require('./icons/sand.png')
-const snow = require('./icons/snow.png')
-const thunderstrome = require('./icons/thunderstrome.png')
-const tornado = require('./icons/tornado.png')
+const clouds = require("./animations/weather-windy.json");
+const sun = require("./animations/weather-sunny.json");
+const dust = require("./animations/weather-dust.json");
+const haze = require("./animations/weather-haze.json");
+const mist = require("./animations/weather-mist.json");
+const moon = require("./animations/weather-night.json");
+const rain = require("./animations/weather-storm.json");
+const snow = require("./animations/weather-snow.json");
+const thunder = require("./animations/weather-thunder.json");
+const tornado = require("./animations/weather-tornado.json");
 
-export {tornado,thunderstrome,snow,sand,rain,moon,mist,haze,dust,clearM,clouds  }
+export { tornado, thunder, snow, rain, moon, mist, haze, dust, sun, clouds };
