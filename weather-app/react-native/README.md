@@ -19,12 +19,12 @@ This weather app shows the current temperature in Celcius, wind speed, humidity,
 
 ## 🚀 How to use
 
-- You need to register at [OpenWeather](https://openweathermap.org/api) and get an API key
-- Install packages with `yarn` or `npm install`.
+1. You need to register at [OpenWeather](https://openweathermap.org/api) and get an API key
+2. Install packages with `yarn` or `npm install`.
   - If you have native iOS code run `npx pod-install`
-- Add the API key to the "App.js" file in line **8**
-- Run `expo start` to start the bundler.
-- Open the project in a React runtime to try it:
+3. Add the API key to the "App.js" file in line **8**
+4. Run `expo start` to start the bundler.
+5. Open the project in a React runtime to try it:
   - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
   - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
   - Web: Any web browser
