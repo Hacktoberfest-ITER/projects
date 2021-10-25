@@ -5,7 +5,7 @@ import WeatherUi from "./components/WeatherUi";
 import * as Location from "expo-location";
 import LottieView from "lottie-react-native";
 
-const API_KEY = "c5212ff223c381bf600ca14a06be152c";
+const API_KEY = "Enter Your API key here";
 
 export default function App() {
 	const [weatherData, setWeatherData] = useState(null);
@@ -70,10 +70,15 @@ export default function App() {
 	} else if (weatherData == null) {
 		return (
 			<View style={styles.searchContainer}>
+				<LottieView
+					style={{ height: 200 }}
+					source={require("./assets/animations/map-locator.json")}
+					autoPlay
+					loop
+					speed={2}
+				/>
 				<SearchBar fetchWeather={fetchWeather} />
-				<Text style={styles.errMsg}>
-					Something is not right! search city here
-				</Text>
+				<Text style={styles.errMsg}>Search City</Text>
 			</View>
 		);
 	}
@@ -105,13 +110,11 @@ const styles = StyleSheet.create({
 		flex: 1,
 		marginTop: StatusBar.currentHeight || 0,
 		alignItems: "center",
-		backgroundColor: "#f34053",
 		justifyContent: "center",
 	},
 	errMsg: {
 		fontSize: 26,
 		fontWeight: "bold",
-		color: "#fff",
 		marginTop: 10,
 		textAlign: "center",
 	},

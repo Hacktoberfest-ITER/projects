@@ -17,7 +17,7 @@ const SearchBar = ({fetchWeather}) => {
             returnKeyType='search'
             />
             <Pressable style={styles.btn} onPress={() => fetchWeather(cityName)}>
-            <FontAwesome5 name="search" size={22} color="#fff" />
+            <FontAwesome5 name="search" size={24} color="#fff" />
             </Pressable>
         </View>
     )
@@ -34,21 +34,23 @@ const styles = StyleSheet.create({
 
     },
     searchBar:{
-        height: 40,
+        height: 45,
         padding: 10,
         borderRadius:12,
         flex:1,
         backgroundColor:'#e3e3e3',
-        color:'#000000'
+        color:'#000000',
+        fontSize:18,
     },
     btn:{
         marginLeft:10,
         backgroundColor:'#f0c72f',
         padding:8,
         borderRadius:12,
-        height: 40,
-        width: 40,
+        height: 45,
+        width: 45,
         alignItems:'center',
+        justifyContent:'center'
     }
 })
 
